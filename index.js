@@ -24,11 +24,13 @@ const addNewGoal = () => {
     
     // ⚠️ Hint 1: Check for duplicates
     // Use 'goalList' to get all existing goals and check if 'goalInput' matches any of them.
-    
     // ⚠️ Hint 2: Prevent duplicates
     // If a duplicate is found, display an alert to the user and don't add the goal to the list.
     // If it's not a duplicate, proceed with adding it as a new goal.
-    
+    if(existingGoals.includes(goalInput)) {
+        alert('This goal already exists');
+        return; // Stop duplicate from being added
+    }
     // ⚠️ Hint 3: Code structure
     // You might want to wrap the duplicate-checking logic in an 'if' statement.
     
